@@ -2,8 +2,7 @@ import Vapor
 
 private let savedReviewers = ["Dmitry Holub", "Aliaksandr Batyesheu", "Andrei Olesau",
                               "Anna Kazhuro", "Vlad Kubicki", "Maksim Panamarou",
-                              "Natalia Semicheva", "Tatsiana Gouteeva", "Vladimir Martyniuk", "Yan Schneider",
-                              "Dmitry Holub"]
+                              "Natalia Semicheva", "Tatsiana Gouteeva", "Vladimir Martyniuk", "Yan Schneider"]
 private var reviewers: [String] = []
 
 func routes(_ app: Application) throws {
@@ -25,10 +24,7 @@ func getReviewers() -> String {
     let firstReviewer = Int.random(in: 0..<reviewers.count)
     reviewersString = reviewers[firstReviewer]
     reviewers.remove(at: firstReviewer)
-    var secondReviewer = Int.random(in: 0..<reviewers.count)
-    while firstReviewer == secondReviewer {
-        secondReviewer = Int.random(in: 0..<reviewers.count)
-    }
+    let secondReviewer = Int.random(in: 0..<reviewers.count)
     reviewersString += " and " + reviewers[secondReviewer]
     reviewers.remove(at: secondReviewer)
     return reviewersString
