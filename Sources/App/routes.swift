@@ -1,6 +1,6 @@
 import Vapor
 
-private let savedReviewers = ["Dmitry Holub", "Aliaksandr Batyesheu", "Andrei Olesau",
+private let savedReviewers = ["Dmitry Holub", "Aliaksandr Batyesheu",
                               "Anna Kazhuro", "Vlad Kubicki", "Maksim Panamarou",
                               "Natalia Semicheva", "Tatsiana Gouteeva", "Vladimir Martyniuk", "Yan Schneider"]
 private var reviewers: [String] = []
